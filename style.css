@@ -1,0 +1,442 @@
+/*------------------------------*/
+/*    reseting for a website    */
+/*------------------------------*/
+
+/* box sizing */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* removing margin */
+
+p,
+picture,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+/* font Weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    font-weight: 400;
+}
+
+p
+{
+    font-family:sans-serif;
+    font-size: 16px;
+    color: rgb(80, 80, 80);
+}
+
+/* body reserting */
+
+body {
+    scroll-behavior: smooth;
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-400);
+    color: hsl(var(--color-white));
+    /* use this background for design file only */
+    background-color: hsl(var(--color-dark));
+    height: 100vh;
+    line-height: 1.5;
+    margin:0;
+    padding: 0;
+}
+
+
+/* image reseting */
+
+figure,
+image,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* font inheriting */
+input,
+blockquote,
+textarea,
+button,
+select {
+    font: inherit;
+}
+
+/* 
+removing scrolling feature for people one who turn them off 
+ in the website and as well as in os level*/
+
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        /* !important attribute is having more specificit than id and inline styling */
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* main style */
+main{
+    display: flex;
+}
+
+/* sidebar style */
+
+aside
+{
+    width: 7%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    position:relative; 
+    overflow: hidden;
+    padding:1rem 0;
+    transition: all 800ms ease;
+}
+
+aside:hover{
+width:20%;
+}
+.sidebar-container
+{
+    width:270px;
+}
+aside .sidebar-info
+{
+    display: flex;
+    align-items: center;
+   
+}
+
+.sidebar-info a  img{
+width:45px;
+margin-left:1rem;
+}
+.sidebar-info h2{
+    margin-left:3rem;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size:20px;
+    color: rgb(64, 63, 63);
+}
+
+
+aside .features
+{
+ margin-top:3rem;
+padding: 1rem 2rem 1rem 0.55rem;
+}
+
+.features .feature{
+    cursor: pointer;
+    display: flex;
+    column-gap: 2rem;
+    padding: 1rem 2rem;
+}
+
+
+.features i,
+.logout i{
+    margin-right:2rem;
+    color: rgb(64, 63, 63);
+    font-size: 20px;
+}
+
+aside .logout {
+    position: absolute;
+    top:90%;
+}
+
+.logout
+{
+    width:238px;
+    padding:1rem 2rem 1rem 2.5rem;
+    display: flex;
+    column-gap: 3rem;
+    cursor: pointer;
+}
+
+.feature:hover i,
+.logout:hover i {
+    color: purple;
+}
+
+.feature:hover,
+.logout:hover {
+    background-color: rgb(228, 228, 228);
+
+}
+
+/* hero styling */
+
+
+.hero
+{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    /* outline: 2px solid red; */
+}
+aside:hover .hero {
+    width: 85%;
+}
+
+.hero .header
+{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* header styling */
+
+.header h1
+{
+   
+    font-weight: 800;
+    font-size:1.5rem;
+    font-family: sans-serif;
+    color: black;
+}
+
+.header i{
+    color: rgb(80, 80, 80);
+}
+
+/* emp-detials */
+
+.hero .emp-details
+{
+    padding: 2rem 0.5rem;
+    display: flex;
+    column-gap:1.5rem;
+}
+
+.emp-details .emp-detail
+{
+    padding: 0.5rem;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border-radius:10px;
+    /* outline: 2px solid rebeccapurple; */
+
+    -webkit-box-shadow: 9px 17px 46px -14px rgba(194, 194, 194, 1);
+        -moz-box-shadow: 9px 17px 46px -14px rgba(194, 194, 194, 1);
+        box-shadow: 9px 17px 46px -14px rgba(194, 194, 194, 1);
+        transition: all 300ms ease;
+}
+
+.emp-detail:hover{
+    scale: 1.1;
+}
+
+ .emp-detail img
+{
+    width:5rem ;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+ .emp-detail .name{
+    font-weight: 900;
+    font-size:0.9rem;
+    font-family: sans-serif;
+    text-transform: uppercase;
+ }
+
+  .emp-detail p
+  {
+    margin-top:5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+.emp-detail .percent,
+.emp-detail .duration
+{
+    margin:0.5rem 0 0 0.25rem;
+    display: flex;
+    column-gap:2rem;
+
+}
+
+.percent h3
+{
+    font-family: sans-serif;
+    font-size: 14px;
+    background-color: rgb(241, 241, 241);
+    padding:4px;
+    border-radius: 8px;
+}
+
+.emp-detail .duration
+{
+    margin:0 0 10px 0 ;
+}
+ .duration h3
+ {
+    font-family: sans-serif;
+    color:rgb(80, 80, 80);
+    font-size: 15px;
+ }
+
+.emp-detail button
+ {
+width: 90%;
+border-radius: 8px;
+color:purple;
+border:1px solid purple;
+background-color: transparent;
+padding: 5px;
+transition: all 300ms ease;
+cursor: pointer;
+font-family: sans-serif;
+font-size: 14px;
+ }
+
+ button:hover
+ {
+color:#fff;
+background-color: purple;
+ }
+
+
+
+ .attendance-title
+ {
+     font-weight: 800;
+     font-size: 1.2rem;
+     font-family: sans-serif;
+     color: black;
+     padding:1rem;
+    }
+
+.attendance {
+    /* outline: 2px solid red; */
+    border-radius: 8px;
+    width: 98%;
+    padding:0 10px 2rem 10px;
+    margin-bottom: 1rem;
+
+    -webkit-box-shadow: -13px 3px 63px -15px rgba(194, 194, 194, 1);
+        -moz-box-shadow: -13px 3px 63px -15px rgba(194, 194, 194, 1);
+        box-shadow: -13px 3px 63px -15px rgba(194, 194, 194, 1);
+}
+    
+/* table  styling */
+
+ table
+ {
+
+    width: 100%;
+    border-collapse: collapse;
+    overflow:hidden;
+    margin-bottom: 1rem;
+ }
+
+
+ /* table head style */
+
+ thead tr
+ {
+    background-color: purple;
+    /* outline: 2px solid red; */
+    /* display: none; */
+ }
+
+  thead tr th:first-child
+  {
+   border-radius: 4px 0 0 0;
+  }
+
+   thead tr th:last-child
+   {
+    border-radius: 0 4px 0 0 ;
+   }
+ thead tr th{
+    padding: 10px 5px 10px 10px;
+    text-align: start;
+    color: #fff;
+    font-family: sans-serif;
+ }
+
+
+.table_row td
+ {
+padding: 15px 10px 15px 10px;
+font-family:sans-serif;
+color:black;
+font-weight: 400;
+ }
+
+.table_row td:last-child {
+    padding: 15px 0;
+}
+tbody #emp2 td
+{
+color: purple;
+font-weight: 800;
+}
+
+
+ .table_row:nth-child(1),
+.table_row:nth-child(3),
+ .table_row:nth-child(5)
+ {
+    background-color: rgb(239, 238, 238);
+ }
+/* 
+ .table_row tr td:last-child
+ {
+    display: none;
+    padding-right: 0;
+    margin-right: 0;
+ } */
+
+ .table_row td button
+ {
+    width: 50%;
+    padding:5px 18px;
+    border: 1px solid purple;
+    color: purple;
+    font-weight: 400;
+    border-radius: 4px;
+    cursor: pointer;
+
+ }
+
+  .table_row td button:hover{
+    color: #fff;
+  }
+
+
+
